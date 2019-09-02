@@ -9,7 +9,7 @@ pipeline {
                 echo 'Imprimir variables de entorno'
                 sh 'set'
                 echo 'Helloworld'
-                sh 'Hello world!! mi user es 'whoami''
+                sh 'Hello world!! mi user es $(whoami)'
             }
         }
     }
