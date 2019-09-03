@@ -1,13 +1,13 @@
 pipeline {
     agent any
     stages {
-        stage ('Testing env') {
+        stage ('Testing Jenkinsfile') {
             steps {
                 echo 'Probando conexion a google'
                 sh 'ping -c 10 www.google.com && sleep 5'
                 echo 'Imprimir variables de entorno'
-                sh 'set | sort'
-                echo 'Helloworld'
+                sh 'set | sort' // se ocupa set, pero tb puede ser "printenv" o "env"
+                echo 'Imprimir Helloworld'
                 sh 'echo -n "Hello world!, estoy usando $(whoami)"'
             }
         }
@@ -18,5 +18,4 @@ pipeline {
         }
     }
 }
-
 
